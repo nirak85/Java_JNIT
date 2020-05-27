@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:web="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>app1</servlet-name>
+		<servlet-class>com.appointment.DoctorRegister</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>app1</servlet-name>
+		<url-pattern>/registerdoctor</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>app2</servlet-name>
+		<servlet-class>com.appointment.DoctorLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>app2</servlet-name>
+		<url-pattern>/logindoctor</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>app3</servlet-name>
+		<servlet-class>com.appointment.PatientRegister</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>app3</servlet-name>
+		<url-pattern>/registerpatient</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>app4</servlet-name>
+		<servlet-class>com.appointment.PatientLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>app4</servlet-name>
+		<url-pattern>/loginpatient</url-pattern>
+	</servlet-mapping>
+
+</web-app>
