@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.table.Payment" table="payment">
+<id name="pid" column="pid"></id>
+<discriminator column="paymenttype" type="string" length="5"></discriminator>	<!-- discriminator- when all the value store in same table -->
+<property name="amount" column="amount" />
+
+<subclass name="com.table.CreditCard" discriminator-value="CC"> 
+<property name="creditCardType" column="cctype" length="10"></property>
+</subclass>
+
+<subclass name="com.table.Cheque" discriminator-value="CQ"> 
+<property name="chequeType" column="cqtype" length="10"></property>
+</subclass>
+</class>
+</hibernate-mapping>
