@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.many.Vendor" table="vendor">
+<id name="id" column="vid"/> 
+<property name="vname" column="vname" length="20"/>
+
+ <!-- <set name="x" cascade="all">
+<key column="fkid"></key>
+<one-to-many class="com.many.Office"/>
+</set>  -->
+
+<!-- <list name="x" cascade="all">
+<key column="fkid"></key>
+<index column="listindex" ></index>
+<one-to-many class="com.many.Office"/>
+</list> -->
+
+<!-- <map name="x" cascade="all">
+<key column="fkid"></key>
+<index column="office"  type="string" ></index>
+<one-to-many class="com.many.Office"/>
+</map> -->
+</class>
+</hibernate-mapping>

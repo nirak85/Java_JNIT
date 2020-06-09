@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.many.Album" table="album">
+<id name="alid" column="alid"/> 
+<property name="alname" column="Album" length="20"/>
+<property name="genres" column="Genres" length="20"/>
+<property name="date" column="Release_Date" />
+<set name="artist" inverse="false" cascade="all" table="artist_album">
+<key column="albumid"/>
+<many-to-many  class="com.many.Album" column="artistid"></many-to-many>
+</set>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.many.Office" table="office">
+<id name="oid" column="oid"/> 
+<property name="oname" column="oname" length="20"/>
+<!-- <property name="fkid" column="fkid" insert="false"></property> -->
+<many-to-one name="v" column="fkvid" class="com.many.Vendor" cascade="all"></many-to-one>
+</class>
+</hibernate-mapping>

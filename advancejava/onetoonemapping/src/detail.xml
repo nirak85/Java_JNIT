@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.one.Detail" table="detail">
+<id name="sid" column="sid"> 
+<generator class="assigned">	<!-- generator should be inside the id (to define the primary key is id) -->
+<param name="property">d</param>
+</generator>
+</id>
+
+<property name="speciality" column="speciality" length="20"/>
+<property name="hospital" column="hospital" length="20"/>
+<one-to-one name="d" class="com.one.Doctor" cascade="all"></one-to-one>
+
+</class>
+</hibernate-mapping>
