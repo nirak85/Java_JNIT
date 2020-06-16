@@ -62,3 +62,5 @@ public class PatientLogin extends HttpServlet {
 		}
 	}
 }
+HttpSession hs=request.getSession();
+hs.setAttribute("ppid", rs.getInt("ppid"));

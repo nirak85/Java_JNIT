@@ -22,7 +22,7 @@
 	<%@page import="java.sql.*" %>
 
 	<table align="center" width="500" height="150" border="2">
-
+<tr>
 		<td>Appointment ID</td>
 		<td>Username</td>
 		<td>Email</td>
