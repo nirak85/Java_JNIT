@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+<bean id="cinema" class="com.autowire.Genre" autowire="byName">
+<property name="name" value="Comedy Movie"></property>
+</bean>
+
+<bean id="m" class="com.autowire.Movie">
+<property name="moviename" value="Chennai Express"></property>
+<property name="ticket" value="35"></property>
+</bean>
+
+</beans>
