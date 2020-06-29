@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+<bean id="myacct" class="com.sba.MyAccount"/> 
+<bean id="authen" class="com.sba.Authentication"/>
+<bean id="log" class="com.sba.logging"/>
+
+
+<bean id="proxyfb" class="org.springframework.aop.framework.ProxyFactoryBean">
+<property name="proxyInterfaces" value="com.sba.CapitalBank"/>
+<property name="interceptorNames">
+<list>
+<value>authen</value>
+<value>log</value>
+</list>
+</property>
+<property name="target">
+<ref bean="myacct"/>
+</property>
+
+</bean>
+</beans>
